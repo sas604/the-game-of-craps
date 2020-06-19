@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<title>The Game of Craps</title>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Rubik:400,700&display=swap" rel="stylesheet">
+<link href="reset.css" rel="stylesheet">
+<link href= "style.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <div class ="site">
+   <h1> The Game of Craps</h1>
+    <div id ="game">
+       
+  
+    <div id="startButton">Roll the dice</div>
+    <div id="scene-container">
+        <div class="scene">
+            <div class="cube1">
+                <div class="cube__face cube__face--front"></div>
+                <div class="cube__face cube__face--back"></div>
+                <div class="cube__face cube__face--right"></div>
+                <div class="cube__face cube__face--left"></div>
+                <div class="cube__face cube__face--top"></div>
+                <div class="cube__face cube__face--bottom"></div>
+            </div>    
+        </div>
+        <div class="scene">
+            <div class="cube2">
+                <div class="cube__face cube__face--front"></div>
+                <div class="cube__face cube__face--back"></div>
+                <div class="cube__face cube__face--right"></div>
+                <div class="cube__face cube__face--left"></div>
+                <div class="cube__face cube__face--top"></div>
+                <div class="cube__face cube__face--bottom"></div>
+            </div>
+        </div>
+    </div>
+    
+    <p class= "roll-display">You rolled: </p><p id="roll" class= "roll-display" >--</p>
+    <br>
+    
+    <p id="feed"> </p>
+    <p id ="money">$1000</p>
+    
+    <div class="input">
+    <p>
+    <label for="betAmount">BetAmount</label>
+    <input name="Bet amount" id="betAmount" type="number" value="10" step="10"/> 
+        </p><p> 
+    <label for="spins">Namber of games</label>
+    <input name="spins" id="spins" type="number" max ="100" min="0" value="0"/> 
+        </p>
+    </div>
+    </div>
+    <div class ="tabs">
+    <input type="radio" name="tabs" id="tabone" checked="checked">
+    <label for="tabone">Rules</label>
+    <div id="ruless" class="tab">
+        <p>In the game of Craps, a "Pass Line" bet proceeds as follows. Using two six-sided dice, the first roll of the dice in a craps round is called the "Come Out Roll." The bet immediately wins when the come out roll is 7 or 11, and loses when the come out roll is 2, 3, or 12. If anything else is rolled (4, 5, 6, 8, 9, or 10) on the come out roll, that number becomes "the point." The player keeps rolling the dice until either 7 or the point is rolled. If the point is rolled first, then the player wins. If the player rolls a 7 first, then the player loses. </p>
+    </div>
+     
+     <input type="radio" name="tabs" id="tabThree" >
+    <label for="tabThree">Game stats</label>
+    <div id="gameStats" class="tab">
+        <p id="totalGame">To see game stats roll the dice</p> 
+        <p id="wins">Wins</p>
+        <p id="loses">Loses</p>
+        <p id="losesp"> </p>
+        <p id="winsp"> </p>
+    <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+    <input type="radio" name="tabs" id="tabTwo" >
+    <label for="tabTwo">Numbers probability</label>
+        
+    <div id="numbers" class="tab">
+    <p id="pBar">15%</p>  
+    <canvas id="myChart2" width="400" height="400"></canvas>
+    <div class="numberWrap">    
+    <p class ="numbers">2</p>
+    <p class ="numbers">3</p>
+    <p class ="numbers">4</p>
+    <p class ="numbers">5</p>
+    <p class ="numbers">6</p>
+    <p class ="numbers">7</p>
+    <p class ="numbers">8</p>
+    <p class ="numbers">9</p>
+    <p class ="numbers">10</p>
+    <p class ="numbers">11</p>
+    <p class ="numbers">12</p>
+    </div>
+    
+    </div>
+   
+    
+    </div>
+    </div>
+    
+    <script src="js.js"></script>    
+</body>
+    
+</html>
